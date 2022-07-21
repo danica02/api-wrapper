@@ -1,15 +1,79 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to right, #faa329, #f72c0f);
+}
+
+.btn-custom {
+    background-color: #87fefa;
+}
+
+.btn-custom:hover {
+    background-color: #02e3dc;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.card{
+    width: 60rem;
+    border-radius: 2rem;
+    margin: 5rem;
+}
+
+.card2{
+    border-radius: 2rem;
+    margin: 5rem;
+    border: 1px solid #000;
+}
+
+img {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 1rem;
+    margin: 2rem;
+    align-self: center
+}
+
+.tbl-img {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 1rem;
+    margin: 2rem;
+    align-self: center
+}
+
+.card-header{
+    border-top-right-radius: 2rem !important;
+    border-top-left-radius: 2rem !important;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.table-box {
+    border: solid 1px #b3b3b3;
+    margin-top: 6rem;
+    padding: 2rem 2rem 0 2rem;
+    border-radius: 1rem;
+}
+
+tbody > tr > td {
+    align-content: center;
+}
+

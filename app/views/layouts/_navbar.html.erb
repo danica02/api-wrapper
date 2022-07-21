@@ -1,0 +1,14 @@
+<nav class="navbar fixed-top bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand">Navbar</a>
+        <div>
+            <%= form_with url: cocktail_details_path, method: :get, html: {class: "container-fluid"} do |form| %>
+                <div class="input-group">
+                <span class="input-group-text bi-search" id="basic-addon1"></span>
+                <%= form.text_field :id, class:"form-control"%>
+                <%= form.submit "Search", class:"btn btn-custom" %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</nav>

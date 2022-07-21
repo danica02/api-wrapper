@@ -1,50 +1,109 @@
-<h2>Cocktail Home</h2>
+<div class="card center">
+    <% @randoms["drinks"].each do |random|%>
+        <div class="card-header">
+            <h4><%= link_to random["strDrink"], cocktail_detail_path(random["idDrink"]) %></h4>
+        </div>
 
-<div>
-    <%= form_with url: cocktail_details_path, method: :get do |form| %>
-        <%= form.label :id, "Search for:" %>
-        <%= form.text_field :id %>
-        <%= form.submit "Search" %>
-    <% end %>
-</div>
+        <img src=<%= random["strDrinkThumb"]%> >
 
-<h1>FEATURED DRINK</h1>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col right">
+                        <b>CATEGORY :</b>
+                    </div>
+                    <div class="col left">
+                        <%= random["strCategory"]%>
+                    </div>
+                </div>
 
-<div>
-<% @randoms["drinks"].each do |random|%>
-    <img src=<%= random["strDrinkThumb"]%> style="width:200px;height:200px">
-    <p><b>NAME:</b> <%= link_to random["strDrink"], cocktail_detail_path(random["idDrink"]) %></p>
-    <p><b>CATEGORY:</b> <%= random["strCategory"]%></p>
-    <p><b>GLASS:</b> <%= random["strGlass"]%></p>
-    <p><b>INSTRUCTIONS:</b> <%= random["strInstructions"]%></p>
-    <h2>INGREDIENTS</h2>
-    <p><b>-</b> <%= random["strMeasure1"]%> <%= link_to random["strIngredient1"], ingredient_path(random["strIngredient1"]) %></p>
-    <%if random["strIngredient2"] != nil%>
-        <p><b>-</b> <%= random["strMeasure2"]%> <%= link_to random["strIngredient2"], ingredient_path(random["strIngredient2"]) %></p>
+                <div class="row">
+                    <div class="col right">
+                        <b>GLASS :</b>
+                    </div>
+                    <div class="col left">
+                        <%= random["strGlass"]%>
+                    </div>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <div class="card-body">
+                    <h5 class="card-title">INSTRUCTIONS</h5>
+                    <p class="card-text"><%= random["strInstructions"]%></p>
+                </div>
+            </li>
+        </ul>
+        
+        <div class="card-body">
+            <h5 class="card-title">INGREDIENTS</h5>
+            <div class="row">
+                <div class="col-5 right bi-caret-right"><b></b></div>
+                <div class="col-7 left"><%= random["strMeasure1"]%> <%= link_to random["strIngredient1"], ingredient_path(random["strIngredient1"]) %></div>
+            </div>
+
+            <%if random["strIngredient2"] != nil%>
+                <div class="row">
+                    <div class="col-5 right bi-caret-right"><b></b></div>
+                    <div class="col-7 left"><%= random["strMeasure2"]%> <%= link_to random["strIngredient2"], ingredient_path(random["strIngredient2"]) %></div>
+                </div>
+            <%end%>
+
+            <%if random["strIngredient3"] != nil%>
+                <div class="row">
+                    <div class="col-5 right bi-caret-right"><b></b></div>
+                    <div class="col-7 left"><%= random["strMeasure3"]%> <%= link_to random["strIngredient3"], ingredient_path(random["strIngredient3"]) %></div>
+                </div>
+            <%end%>
+
+            <%if random["strIngredient4"] != nil%>
+                <div class="row">
+                    <div class="col-5 right bi-caret-right"><b></b></div>
+                    <div class="col-7 left"><%= random["strMeasure4"]%> <%= link_to random["strIngredient4"], ingredient_path(random["strIngredient4"]) %></div>
+                </div>
+            <%end%>
+
+            <%if random["strIngredient5"] != nil%>
+                <div class="row">
+                    <div class="col-5 right bi-caret-right"><b></b></div>
+                    <div class="col-7 left"><%= random["strMeasure5"]%> <%= link_to random["strIngredient5"], ingredient_path(random["strIngredient5"]) %></div>
+                </div>
+            <%end%>
+
+            <%if random["strIngredient6"] != nil%>
+                <div class="row">
+                    <div class="col-5 right bi-caret-right"><b></b></div>
+                    <div class="col-7 left"><%= random["strMeasure6"]%> <%= link_to random["strIngredient6"], ingredient_path(random["strIngredient6"]) %></div>
+                </div>
+            <%end%>
+
+            <%if random["strIngredient7"] != nil%>
+                <div class="row">
+                    <div class="col-5 right bi-caret-right"><b></b></div>
+                    <div class="col-7 left"><%= random["strMeasure7"]%> <%= link_to random["strIngredient7"], ingredient_path(random["strIngredient7"]) %></div>
+                </div>
+            <%end%>
+
+            <%if random["strIngredient8"] != nil%>
+                <div class="row">
+                    <div class="col-5 right bi-caret-right"><b></b></div>
+                    <div class="col-7 left"><%= random["strMeasure8"]%> <%= link_to random["strIngredient8"], ingredient_path(random["strIngredient8"]) %></div>
+                </div>
+            <%end%>
+
+            <%if random["strIngredient9"] != nil%>
+                <div class="row">
+                    <div class="col-5 right bi-caret-right"><b></b></div>
+                    <div class="col-7 left"><%= random["strMeasure9"]%> <%= link_to random["strIngredient9"], ingredient_path(random["strIngredient9"]) %></div>
+                </div>
+            <%end%>
+
+            <%if random["strIngredient10"] != nil%>
+                <div class="row">
+                    <div class="col-5 right bi-caret-right"><b></b></div>
+                    <div class="col-7 left"><%= random["strMeasure10"]%> <%= link_to random["strIngredient10"], ingredient_path(random["strIngredient10"]) %></div>
+                </div>
+            <%end%>
+        </div>
     <%end%>
-    <%if random["strIngredient3"] != nil%>
-        <p><b>-</b> <%= random["strMeasure3"]%> <%= link_to random["strIngredient3"], ingredient_path(random["strIngredient3"]) %></p>
-    <%end%>
-    <%if random["strIngredient4"] != nil%>
-        <p><b>-</b> <%= random["strMeasure4"]%> <%= link_to random["strIngredient4"], ingredient_path(random["strIngredient4"]) %></p>
-    <%end%>
-    <%if random["strIngredient5"] != nil%>
-        <p><b>-</b> <%= random["strMeasure5"]%> <%= link_to random["strIngredient5"], ingredient_path(random["strIngredient5"]) %></p>
-    <%end%>
-    <%if random["strIngredient6"] != nil%>
-        <p><b>-</b> <%= random["strMeasure6"]%> <%= link_to random["strIngredient6"], ingredient_path(random["strIngredient6"]) %></p>
-    <%end%>
-    <%if random["strIngredient7"] != nil%>
-        <p><b>-</b> <%= random["strMeasure7"]%> <%= link_to random["strIngredient7"], ingredient_path(random["strIngredient7"]) %></p>
-    <%end%>
-    <%if random["strIngredient8"] != nil%>
-        <p><b>-</b> <%= random["strMeasure8"]%> <%= link_to random["strIngredient8"], ingredient_path(random["strIngredient8"]) %></p>
-    <%end%>
-    <%if random["strIngredient9"] != nil%>
-        <p><b>-</b> <%= random["strMeasure9"]%> <%= link_to random["strIngredient9"], ingredient_path(random["strIngredient9"]) %></p>
-    <%end%>
-    <%if random["strIngredient10"] != nil%>
-        <p><b>-</b> <%= random["strMeasure10"]%> <%= link_to random["strIngredient10"], ingredient_path(random["strIngredient10"]) %></p>
-    <%end%>
-<%end%>
 </div>

@@ -1,0 +1,41 @@
+<h1><%= @informations["drinks"][0]["strDrink"]%></h1>
+
+
+<div>
+<% @informations["drinks"].each do |information|%>
+    <img src=<%= information["strDrinkThumb"]%> style="width:200px;height:200px">
+    <p><b>NAME:</b> <%= link_to information["strDrink"], cocktail_detail_path(information["idDrink"]) %></p>
+    <p><b>CATEGORY:</b> <%= information["strCategory"]%></p>
+    <p><b>GLASS:</b> <%= information["strGlass"]%></p>
+    <p><b>INSTRUCTIONS:</b> <%= information["strInstructions"]%></p>
+    <h2>INGREDIENTS</h2>
+    <p><b>-</b> <%= information["strMeasure1"]%> <%= link_to information["strIngredient1"], ingredient_path(information["strIngredient1"]) %></p>
+    <%if information["strIngredient2"] != nil%>
+        <p><b>-</b> <%= information["strMeasure2"]%> <%= link_to information["strIngredient2"], ingredient_path(information["strIngredient2"]) %></p>
+    <%end%>
+    <%if information["strIngredient3"] != nil%>
+        <p><b>-</b> <%= information["strMeasure3"]%> <%= link_to information["strIngredient3"], ingredient_path(information["strIngredient3"]) %></p>
+    <%end%>
+    <%if information["strIngredient4"] != nil%>
+        <p><b>-</b> <%= information["strMeasure4"]%> <%= link_to information["strIngredient4"], ingredient_path(information["strIngredient4"]) %></p>
+    <%end%>
+    <%if information["strIngredient5"] != nil%>
+        <p><b>-</b> <%= information["strMeasure5"]%> <%= link_to information["strIngredient5"], ingredient_path(information["strIngredient5"]) %></p>
+    <%end%>
+    <%if information["strIngredient6"] != nil%>
+        <p><b>-</b> <%= information["strMeasure6"]%> <%= link_to information["strIngredient6"], ingredient_path(information["strIngredient6"]) %></p>
+    <%end%>
+    <%if information["strIngredient7"] != nil%>
+        <p><b>-</b> <%= information["strMeasure7"]%> <%= link_to information["strIngredient7"], ingredient_path(information["strIngredient7"]) %></p>
+    <%end%>
+    <%if information["strIngredient8"] != nil%>
+        <p><b>-</b> <%= information["strMeasure8"]%> <%= link_to information["strIngredient8"], ingredient_path(information["strIngredient8"]) %></p>
+    <%end%>
+    <%if information["strIngredient9"] != nil%>
+        <p><b>-</b> <%= information["strMeasure9"]%> <%= link_to information["strIngredient9"], ingredient_path(information["strIngredient9"]) %></p>
+    <%end%>
+    <%if information["strIngredient10"] != nil%>
+        <p><b>-</b> <%= information["strMeasure10"]%> <%= link_to information["strIngredient10"], ingredient_path(information["strIngredient10"]) %></p>
+    <%end%>
+<%end%>
+</div>

@@ -1,0 +1,13 @@
+<h1><%= @ingredients["ingredients"][0]["strIngredient"]%></h1>
+
+<img src="https://www.thecocktaildb.com/images/ingredients/<%= @ingredients["ingredients"][0]["strIngredient"]%>-medium.png">
+<% if @ingredients["ingredients"][0]["strDescription"] != nil%>
+    <p><b>DESCRIPTION: </b><%= @ingredients["ingredients"][0]["strDescription"]%></p>
+<%end%>
+<% if @ingredients["ingredients"][0]["strType"] != nil%>
+    <p><b>TYPE: </b><%= @ingredients["ingredients"][0]["strType"]%></p>
+<%end%>
+
+<% if @ingredients["ingredients"][0]["strAlcohol"] != nil%>
+    <p><b>ALCOHOL: </b><%= @ingredients["ingredients"][0]["strAlcohol"]%></p>
+<%end%>

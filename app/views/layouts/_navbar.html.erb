@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand">Navbar</a>
+        <a class="navbar-brand" href="#"><%= image_tag "logo.png", class: "logo" %></a>
         <div>
             <%= form_with url: cocktail_details_path, method: :get, html: {class: "container-fluid"} do |form| %>
                 <div class="input-group">

@@ -1,4 +1,4 @@
-<div class="card center">
+<div class="card random center">
     <% @informations["drinks"].each do |information|%>
         <div class="card-header">
             <h4><%= link_to information["strDrink"], cocktail_detail_path(information["idDrink"]) %></h4>

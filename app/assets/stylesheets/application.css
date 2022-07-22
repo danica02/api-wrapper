@@ -24,16 +24,28 @@
     text-align: left;
 }
 
-.card{
-    width: 60rem;
-    border-radius: 2rem;
-    margin: 5rem;
+.random{
+    width: 50rem;
 }
 
-.card2{
+.cocktail{
+    width: 25rem;
+    height: 15rem;
+    padding-top: 2rem;
+}
+
+.ing-img{
+    width: 25rem;
+    height: 40rem;
+    padding: 5rem;
+}
+
+.ing-details{
+    height: 40rem;
+}
+
+.card{
     border-radius: 2rem;
-    margin: 5rem;
-    border: 1px solid #000;
 }
 
 img {
@@ -44,9 +56,14 @@ img {
     align-self: center
 }
 
+.logo {
+    height: 3rem !important;
+    margin: 0 !important;
+}
+
 .tbl-img {
-    height: 5rem;
-    width: 5rem;
+    height: 7rem;
+    width: 7rem;
     border-radius: 1rem;
     margin: 2rem;
     align-self: center
@@ -57,6 +74,11 @@ img {
     border-top-left-radius: 2rem !important;
 }
 
+.card-footer{
+    border-bottom-right-radius: 2rem !important;
+    border-bottom-left-radius: 2rem !important;
+}
+
 a:link {
     text-decoration: none;
 }
@@ -64,6 +86,8 @@ a:link {
 .container {
     display: flex;
     justify-content: center;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
 }
 
 .table-box {
@@ -77,3 +101,7 @@ tbody > tr > td {
     align-content: center;
 }
 
+.s-font {
+    font-size: 14px;
+    margin-bottom: 8px;
+}

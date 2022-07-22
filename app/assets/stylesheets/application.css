@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+body {
+    background-color: #f0f2f4;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -46,6 +52,8 @@
 
 .card{
     border-radius: 2rem;
+    border: 1px solid #f99406;
+    background-color: #e6fffe;
 }
 
 img {
@@ -58,6 +66,7 @@ img {
 
 .logo {
     height: 3rem !important;
+    width: 15rem !important;
     margin: 0 !important;
 }
 
@@ -72,6 +81,8 @@ img {
 .card-header{
     border-top-right-radius: 2rem !important;
     border-top-left-radius: 2rem !important;
+    background-color: #02e3dc;
+    font-family: 'Mochiy Pop One', sans-serif;
 }
 
 .card-footer{
@@ -91,7 +102,7 @@ a:link {
 }
 
 .table-box {
-    border: solid 1px #b3b3b3;
+    border: solid 1px #faa329;
     margin-top: 6rem;
     padding: 2rem 2rem 0 2rem;
     border-radius: 1rem;
@@ -104,4 +115,9 @@ tbody > tr > td {
 .s-font {
     font-size: 14px;
     margin-bottom: 8px;
+}
+
+.list-group {
+    --bs-list-group-bg: #e6fffe !important;
+    --bs-list-group-border-color: #f99406;
 }

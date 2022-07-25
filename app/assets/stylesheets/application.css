@@ -121,3 +121,11 @@ tbody > tr > td {
     --bs-list-group-bg: #e6fffe !important;
     --bs-list-group-border-color: #f99406;
 }
+
+.bi-caret-right-fill {
+    color: #faa329;
+}
+
+.bi-arrow-left-circle-fill {
+    color: #faa329;
+}

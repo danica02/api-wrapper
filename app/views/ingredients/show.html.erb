@@ -3,46 +3,47 @@
         <div class="card ing-img center">
             <h1><%= @ingredients["ingredients"][0]["strIngredient"]%></h1>
             <img src="https://www.thecocktaildb.com/images/ingredients/<%= @ingredients["ingredients"][0]["strIngredient"]%>-medium.png">
+            <%= link_to ' Back', home_index_path, class:"delete-icon bi-arrow-left-circle-fill" %>
         </div>
     </div>
+   
+    <% if @ingredients["ingredients"][0]["strDescription"] != nil%>
+        <div class="col-8">
+            <div class="card ing-details center">
+                <div class="card-header">
+                    <h4><%= @ingredients["ingredients"][0]["strIngredient"]%> Details</h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col right">
+                                <b>TYPE :</b>
+                            </div>
+                            <div class="col left">
+                                <%= @ingredients["ingredients"][0]["strType"]%>
+                            </div>
+                        </div>
 
-    <div class="col-8">
-        <div class="card ing-details center">
-            <div class="card-header">
-                <h4><%= @ingredients["ingredients"][0]["strIngredient"]%> Details</h4>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                    <div class="row">
-                        <div class="col right">
-                            <b>TYPE :</b>
+                        <div class="row">
+                            <div class="col right">
+                                <b>IS ALCOHOL? :</b>
+                            </div>
+                            <div class="col left">
+                                <%= @ingredients["ingredients"][0]["strAlcohol"]%>
+                            </div>
                         </div>
-                        <div class="col left">
-                            <%= @ingredients["ingredients"][0]["strType"]%>
-                        </div>
-                    </div>
+                    </li>
 
-                    <div class="row">
-                        <div class="col right">
-                            <b>IS ALCOHOL? :</b>
+                    <li class="list-group-item">
+                        <div class="card-body">
+                            <h5 class="card-title">DESCRIPTION</h5>
+                            <p class="card-text"><%= @ingredients["ingredients"][0]["strDescription"]%></p>
                         </div>
-                        <div class="col left">
-                            <%= @ingredients["ingredients"][0]["strAlcohol"]%>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="list-group-item">
-                    <div class="card-body">
-                    <% if @ingredients["ingredients"][0]["strDescription"] != nil%>
-                        <h5 class="card-title">DESCRIPTION</h5>
-                        <p class="card-text"><%= @ingredients["ingredients"][0]["strDescription"]%></p>
-                    <%end%>
-                    </div>
-                </li>
-            </ul>
-        </div
-    </div>
+                    </li>
+                </ul>
+            </div
+        </div>
+    <%end%>
 </div>
 
 

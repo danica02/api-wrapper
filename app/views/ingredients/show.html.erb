@@ -3,7 +3,7 @@
         <div class="card ing-img center">
             <h1><%= @ingredients["ingredients"][0]["strIngredient"]%></h1>
             <img src="https://www.thecocktaildb.com/images/ingredients/<%= @ingredients["ingredients"][0]["strIngredient"]%>-medium.png">
-            <%= link_to ' Back', home_index_path, class:"delete-icon bi-arrow-left-circle-fill" %>
+            <%= link_to ' Back', request.referrer, class:"delete-icon bi-arrow-left-circle-fill" %>
         </div>
     </div>
    

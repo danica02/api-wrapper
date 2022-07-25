@@ -1,13 +1,21 @@
 <div class="card random center">
     <% @randoms["drinks"].each do |random|%>
         <div class="card-header">
-            <h4><%= link_to random["strDrink"], cocktail_detail_path(random["idDrink"]) %></h4>
+            <h4>FEATURED DRINK</h4>
         </div>
 
         <img src=<%= random["strDrinkThumb"]%> >
 
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
+                <div class="row">
+                    <div class="col right">
+                        <b>NAME :</b>
+                    </div>
+                    <div class="col left">
+                        <%= link_to random["strDrink"], cocktail_detail_path(random["idDrink"]) %>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col right">
                         <b>CATEGORY :</b>
